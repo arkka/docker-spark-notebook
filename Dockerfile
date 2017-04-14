@@ -2,7 +2,7 @@
 # Distributed under the terms of the Modified BSD License.
 FROM jupyter/pyspark-notebook
 
-MAINTAINER Jupyter Project <jupyter@googlegroups.com>
+MAINTAINER Arkka Dhiratara <arkka.d@gmail.com>
 
 USER root
 
@@ -12,6 +12,7 @@ ENV R_LIBS_USER $SPARK_HOME/R/lib
 # R pre-requisites
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+    curl \
     fonts-dejavu \
     gfortran \
     gcc && apt-get clean && \
