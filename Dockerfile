@@ -25,6 +25,9 @@ RUN curl -sL -O --retry 3 \
     && curl -sL -O --retry 3 \
     "http://search.maven.org/remotecontent?filepath=org/apache/hadoop/hadoop-aws/2.7.3/hadoop-aws-2.7.3.jar" \
     | > $SPARK_HOME/jars/hadoop-aws-2.7.3.jar
+    && curl -sL -O --retry 3 \
+    "http://search.maven.org/remotecontent?filepath=org/apache/hadoop/hadoop-aws/2.7.3/hadoop-aws-2.7.3.jar" \
+    | > $SPARK_HOME/jars/hadoop-aws-2.7.3.jar
 
 USER $NB_USER
 
@@ -43,3 +46,6 @@ RUN jupyter toree install --sys-prefix
 # Spylon-kernel
 RUN conda install --quiet --yes 'spylon-kernel=0.2*'
 RUN python -m spylon_kernel install --sys-prefix
+
+# Python Package
+RUN pip2 --no-cache-dir install elasticsearch unidecode nltk Sastrawi
