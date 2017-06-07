@@ -24,7 +24,7 @@ RUN curl -sL -O --retry 3 \
     | > $SPARK_HOME/jars/aws-java-sdk-1.11.119.jar \
     && curl -sL -O --retry 3 \
     "http://search.maven.org/remotecontent?filepath=org/apache/hadoop/hadoop-aws/2.7.3/hadoop-aws-2.7.3.jar" \
-    | > $SPARK_HOME/jars/hadoop-aws-2.7.3.jar
+    | > $SPARK_HOME/jars/hadoop-aws-2.7.3.jar \
     && curl -sL -O --retry 3 \
     "http://search.maven.org/remotecontent?filepath=org/apache/hadoop/hadoop-aws/2.7.3/hadoop-aws-2.7.3.jar" \
     | > $SPARK_HOME/jars/hadoop-aws-2.7.3.jar
