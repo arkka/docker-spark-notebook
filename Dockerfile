@@ -48,4 +48,4 @@ RUN conda install --quiet --yes 'spylon-kernel=0.2*'
 RUN python -m spylon_kernel install --sys-prefix
 
 # Python Package
-RUN pip2 --no-cache-dir install elasticsearch unidecode nltk Sastrawi
+RUN pip2 --no-cache-dir install pytz sklearn elasticsearch unidecode nltk Sastrawi
